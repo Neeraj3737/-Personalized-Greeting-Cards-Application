@@ -1,0 +1,227 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(10, 4, 26, 0.8);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.2s ease;
+}
+
+.modal-box {
+  width: 100%;
+  max-width: 460px;
+  padding: 36px 32px;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.modal-close:hover {
+  background: var(--glass-hover);
+  color: var(--cream);
+}
+
+/* Header */
+.modal-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.premium-crown {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 10px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.modal-header h2 {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--cream);
+  margin-bottom: 8px;
+}
+
+.modal-header h2 em {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.modal-header p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.modal-header p strong {
+  color: var(--lavender-glow);
+}
+
+/* Perks */
+.perks-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.perk-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.perk-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* Plan selector */
+.plan-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.plan-card {
+  position: relative;
+  padding: 16px 14px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--glass-border);
+  background: var(--glass);
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow: visible;
+}
+
+.plan-card:hover {
+  border-color: rgba(255, 213, 105, 0.4);
+}
+
+.plan-card.selected {
+  border-color: var(--gold);
+  background: rgba(255, 213, 105, 0.12);
+  box-shadow: 0 0 0 1px var(--gold), 0 4px 20px rgba(255, 213, 105, 0.2);
+}
+
+.plan-tag {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  color: var(--deep-plum);
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.plan-name {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.plan-price {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--cream);
+}
+
+.plan-price span {
+  font-size: 0.8rem;
+  font-weight: 400;
+  font-family: var(--font-body);
+  color: var(--text-secondary);
+}
+
+.plan-desc {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* Subscribe button */
+.subscribe-btn {
+  width: 100%;
+  justify-content: center;
+  padding: 15px;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.modal-fine-print {
+  text-align: center;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* Loading dots */
+.loading-dots span {
+  animation: fadeIn 0.5s infinite alternate;
+}
+
+/* Success state */
+.success-state {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.success-icon {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 16px;
+  animation: float 2s ease-in-out infinite;
+}
+
+.success-state h2 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--cream);
+  margin-bottom: 8px;
+}
+
+.success-state p {
+  color: var(--text-secondary);
+}
